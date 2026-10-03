@@ -1,11 +1,13 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
-    app_name: str = "App Name"
-    app_version: str = "1.0.0"
+    app_name: str 
+    app_version: str
     openai_api_key: str
-    file_allowed_extensions: list = []
-    file_max_size: int = 5
+    file_allowed_types: list
+    file_max_size: int
+    upload_dir: str
+    file_default_chunk_size: int
 
     class Config:
         env_file = ".env"
