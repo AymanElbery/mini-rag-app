@@ -8,6 +8,8 @@ class Settings(BaseSettings):
     file_max_size: int
     upload_dir: str
     file_default_chunk_size: int
+    mongodb_uri: str
+    mongodb_db_name: str
 
     class Config:
         env_file = ".env"

@@ -7,7 +7,7 @@ This is a minimal implementaion of the RAG for question answering.
 - Python 3.8 or later.
 
 ## Installation
-### Setup the environment variables
+### 1. Setup the environment variables
 
 ```bash
 $ pip install -r requirements.txt
@@ -19,9 +19,14 @@ $ cp .env.example .env
 
 Set your environment variables in the `.env` file like `OPENAI_API_KEY` value.
 
-## Run the FastApi server
+## 2. Run the FastApi server
 
 ```bash
 $ uvicorn main:app --reload --host 0.0.0.0 
 ```
 
+## 3. Create a files directory in assets
+
+```bash
+$ mkdir assets/files 
+```
