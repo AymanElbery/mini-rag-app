@@ -15,3 +15,5 @@ class ResponseSignal(Enum):
     FILE_LOADER_FAILED = "file_loading_failed"
     FILE_CONTENT_FAILED = "file_content_failed"
     FILE_CHUNKING_FAILED = "file_chunking_failed"
+    PROJECT_CREATION_FAILED = "project_creation_failed"
+    FILE_PROCESSED_SUCCESS = "file_processed_successfully"

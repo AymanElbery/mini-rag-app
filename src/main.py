@@ -9,7 +9,7 @@ from motor.motor_asyncio import AsyncIOMotorClient
 async def lifespan(app: FastAPI):
     # ---- Startup Logic ----
     app.mongo_conn = AsyncIOMotorClient(get_settings().mongodb_uri)
-    app.mongo_db = app.mongo_conn[get_settings().mongodb_db_name]
+    app.db_client = app.mongo_conn[get_settings().mongodb_db_name]
     
     yield  # The app runs and processes requests while sitting here
     # Close the connection when the app is shutting down
